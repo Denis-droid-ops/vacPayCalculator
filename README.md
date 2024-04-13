@@ -8,20 +8,13 @@ project, that calculate vacation pays
 ## Какие функции предоставляет?
 
 Приложение предоставляет один API: GET "/calculacte", который непосредственно и производит расчет, 
-в метод calculacte передаются данные в формате JSON в виде:
+в метод calculacte передаются параметры:
 
-{
-
-    "avgSalaryForYear": 28000, - Long type, средняя зарплата за 12 месяцев
+avgSalaryForYear: - Long type, средняя зарплата за 12 месяцев
+vacDaysCount: - Integer type, количество дней отпуска
+vacationStart: - LocalDate type, начальный день отпуска
+vacationEnd: - LocalDate type, конечный день отпуска
     
-    "vacDaysCount": 14, - Integer type, количество дней отпуска
-    
-    "vacationStart": "2024-02-20", - LocalDate type, начальный день отпуска
-    
-    "vacationEnd": "2024-03-05" - LocalDate type, конечный день отпуска
-    
-}
-
 Метод расчитывает отпускные либо с определенным количеством дней(тогда параметры vacationStart и vacationEnd необязательны),
 либо с конкретными календарными датами(тогда параметр vacDaysCount необязателен) с учетом ПРАЗДНИЧНЫХ дней
 
