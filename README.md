@@ -11,8 +11,11 @@ project, that calculate vacation pays
 в метод calculacte передаются параметры:
 
 avgSalaryForYear: - Long type, средняя зарплата за 12 месяцев
+
 vacDaysCount: - Integer type, количество дней отпуска
+
 vacationStart: - LocalDate type, начальный день отпуска
+
 vacationEnd: - LocalDate type, конечный день отпуска
     
 Метод расчитывает отпускные либо с определенным количеством дней(тогда параметры vacationStart и vacationEnd необязательны),
